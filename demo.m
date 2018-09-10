@@ -1,4 +1,5 @@
 close all
+clear all
 %% transport between two Gaussian Mixtures
 N=128;
 p1 = gmdistribution([0.2; 0.5], reshape([0.05, 0.03].^2, 1, 1, 2), [0.5, 0.5]);
@@ -9,8 +10,8 @@ w1=p1.pdf(locations) + 0.1; w1=w1(:)/sum(w1(:));
 w2=p2.pdf(locations) + 0.1; w2=w2(:)/sum(w2(:));
 
 C=pdist2(locations, locations).^2;
-plot(locations, w1); hold on
-plot(locations, w2);
+plot(locations, w1, 'r'); hold on
+plot(locations, w2, 'g');
 
 
 max_iters=[1, 10, 50, 200, 1000, 5000];
