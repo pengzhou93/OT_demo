@@ -1,4 +1,4 @@
-addpath('/Users/jxy198/mosek/7/toolbox/r2013a/');
+addpath('/home/shhs/Desktop/user/soft/mosek/8/toolbox/r2014a/');
 
 global problemMap problemSet
 problemMap = containers.Map('KeyType', 'char', 'ValueType', 'double');
